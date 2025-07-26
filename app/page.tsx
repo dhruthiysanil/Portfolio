@@ -44,9 +44,8 @@ export default function AnimatedPortfolio() {
 
   // Enhanced mouse tracking with movement detection
   useEffect(() => {
-    let moveTimeout: NodeJS.Timeout
-
-    const handleMouseMove = (e) => {
+    let moveTimeout: ReturnType<typeof setTimeout>
+    const handleMouseMove = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY })
       setIsMouseMoving(true)
       // Clear existing timeout
@@ -174,7 +173,7 @@ export default function AnimatedPortfolio() {
     },
   ]
 
-  const handleNavClick = (section) => {
+  const handleNavClick = (section: string) => {
     setActiveSection(section.toLowerCase())
     // Scroll to top when changing sections
     window.scrollTo({ top: 0, behavior: "smooth" })
@@ -568,12 +567,14 @@ export default function AnimatedPortfolio() {
                 }}
                 onClick={() => handleNavClick("home")}
                 onMouseEnter={(e) => {
-                  e.target.style.transform = "scale(1.05)"
-                  e.target.style.filter = "drop-shadow(0 0 15px rgba(96, 165, 250, 0.8))"
+                  const target = e.target as HTMLElement
+                  target.style.transform = "scale(1.05)"
+                  target.style.filter = "drop-shadow(0 0 15px rgba(96, 165, 250, 0.8))"
                 }}
                 onMouseLeave={(e) => {
-                  e.target.style.transform = "scale(1)"
-                  e.target.style.filter = "none"
+                  const target = e.target as HTMLElement
+                  target.style.transform = "scale(1)"
+                  target.style.filter = "none"
                 }}
               >
                 Dhruthi
@@ -600,18 +601,18 @@ export default function AnimatedPortfolio() {
                       cursor: "pointer",
                     }}
                     onMouseEnter={(e) => {
-                      e.target.style.color = "#60a5fa"
-                      e.target.style.background = "rgba(96, 165, 250, 0.15)"
-                      e.target.style.transform = "translateY(-3px) scale(1.05)"
-                      e.target.style.boxShadow = "0 8px 25px rgba(96, 165, 250, 0.3)"
-                      e.target.style.filter = "drop-shadow(0 0 10px rgba(96, 165, 250, 0.5))"
+                      const target = e.target as HTMLElement
+                      target.style.color = "#60a5fa"
+                      target.style.background = "rgba(96, 165, 250, 0.15)"
+                      target.style.transform = "translateY(-3px) scale(1.05)"
+                      target.style.boxShadow = "0 8px 25px rgba(96, 165, 250, 0.3)"
                     }}
                     onMouseLeave={(e) => {
-                      e.target.style.color = activeSection === item.toLowerCase() ? "#60a5fa" : "#ccc"
-                      e.target.style.background = "transparent"
-                      e.target.style.transform = "translateY(0) scale(1)"
-                      e.target.style.boxShadow = "none"
-                      e.target.style.filter = "none"
+                      const target = e.target as HTMLElement
+                      target.style.color = activeSection === item.toLowerCase() ? "#60a5fa" : "#ccc"
+                      target.style.background = "transparent"
+                      target.style.transform = "translateY(0) scale(1)"
+                      target.style.boxShadow = "none"
                     }}
                   >
                     {item}
@@ -670,7 +671,7 @@ export default function AnimatedPortfolio() {
                       marginBottom: "2rem",
                     }}
                   >
-                    QA Engineer & Web Developer
+                    Tester & Web Developer
                   </h2>
                 </div>
                 {/* Description */}
@@ -720,14 +721,16 @@ export default function AnimatedPortfolio() {
                       overflow: "hidden",
                     }}
                     onMouseEnter={(e) => {
-                      e.target.style.transform = "translateY(-4px) scale(1.08)"
-                      e.target.style.boxShadow = "0 20px 40px rgba(96, 165, 250, 0.5)"
-                      e.target.style.filter = "brightness(1.1)"
+                      const target = e.target as HTMLElement
+                      target.style.transform = "translateY(-4px) scale(1.08)"
+                      target.style.boxShadow = "0 20px 40px rgba(96, 165, 250, 0.5)"
+                      target.style.filter = "brightness(1.1)"
                     }}
                     onMouseLeave={(e) => {
-                      e.target.style.transform = "translateY(0) scale(1)"
-                      e.target.style.boxShadow = "none"
-                      e.target.style.filter = "brightness(1)"
+                      const target = e.target as HTMLElement
+                      target.style.transform = "translateY(0) scale(1)"
+                      target.style.boxShadow = "none"
+                      target.style.filter = "brightness(1)"
                     }}
                   >
                     Download Resume
@@ -751,14 +754,16 @@ export default function AnimatedPortfolio() {
                         justifyContent: "center",
                       }}
                       onMouseEnter={(e) => {
-                        e.target.style.transform = "translateY(-3px) scale(1.1)"
-                        e.target.style.boxShadow = "0 10px 20px rgba(96, 165, 250, 0.4)"
-                        e.target.style.background = "rgba(96, 165, 250, 0.2)"
+                        const target = e.currentTarget as HTMLElement
+                        target.style.transform = "translateY(-3px) scale(1.1)"
+                        target.style.boxShadow = "0 10px 20px rgba(96, 165, 250, 0.4)"
+                        target.style.background = "rgba(96, 165, 250, 0.2)"
                       }}
                       onMouseLeave={(e) => {
-                        e.target.style.transform = "translateY(0) scale(1)"
-                        e.target.style.boxShadow = "none"
-                        e.target.style.background = "rgba(96, 165, 250, 0.1)"
+                        const target = e.currentTarget as HTMLElement
+                        target.style.transform = "translateY(0) scale(1)"
+                        target.style.boxShadow = "none"
+                        target.style.background = "rgba(96, 165, 250, 0.1)"
                       }}
                     >
                       <Linkedin size={24} />
@@ -778,14 +783,16 @@ export default function AnimatedPortfolio() {
                         justifyContent: "center",
                       }}
                       onMouseEnter={(e) => {
-                        e.target.style.transform = "translateY(-3px) scale(1.1)"
-                        e.target.style.boxShadow = "0 10px 20px rgba(245, 158, 11, 0.4)"
-                        e.target.style.background = "rgba(245, 158, 11, 0.2)"
+                        const target = e.currentTarget as HTMLElement
+                        target.style.transform = "translateY(-3px) scale(1.1)"
+                        target.style.boxShadow = "0 10px 20px rgba(245, 158, 11, 0.4)"
+                        target.style.background = "rgba(245, 158, 11, 0.2)"
                       }}
                       onMouseLeave={(e) => {
-                        e.target.style.transform = "translateY(0) scale(1)"
-                        e.target.style.boxShadow = "none"
-                        e.target.style.background = "rgba(245, 158, 11, 0.1)"
+                        const target = e.currentTarget as HTMLElement
+                        target.style.transform = "translateY(0) scale(1)"
+                        target.style.boxShadow = "none"
+                        target.style.background = "rgba(245, 158, 11, 0.1)"
                       }}
                     >
                       <Mail size={24} />
@@ -807,14 +814,16 @@ export default function AnimatedPortfolio() {
                         justifyContent: "center",
                       }}
                       onMouseEnter={(e) => {
-                        e.target.style.transform = "translateY(-3px) scale(1.1)"
-                        e.target.style.boxShadow = "0 10px 20px rgba(167, 139, 250, 0.4)"
-                        e.target.style.background = "rgba(167, 139, 250, 0.2)"
+                        const target = e.currentTarget as HTMLElement
+                        target.style.transform = "translateY(-3px) scale(1.1)"
+                        target.style.boxShadow = "0 10px 20px rgba(167, 139, 250, 0.4)"
+                        target.style.background = "rgba(167, 139, 250, 0.2)"
                       }}
                       onMouseLeave={(e) => {
-                        e.target.style.transform = "translateY(0) scale(1)"
-                        e.target.style.boxShadow = "none"
-                        e.target.style.background = "rgba(167, 139, 250, 0.1)"
+                        const target = e.currentTarget as HTMLElement
+                        target.style.transform = "translateY(0) scale(1)"
+                        target.style.boxShadow = "none"
+                        target.style.background = "rgba(167, 139, 250, 0.1)"
                       }}
                     >
                       <Github size={24} />
@@ -895,7 +904,7 @@ export default function AnimatedPortfolio() {
                       }}
                     >
                       <img
-                        src="/pic.jpeg"
+                        src="/placeholder.svg?height=272&width=272"
                         alt="Dhruthi Y Sanil"
                         style={{
                           width: "272px",
@@ -915,29 +924,39 @@ export default function AnimatedPortfolio() {
                         color: "#ccc",
                         lineHeight: "1.8",
                         marginBottom: "2rem",
-                        textAlign: "justify",// Indents the first line
+                        textAlign: "justify",
                       }}
                     >
-                     MCA graduate passionate about software quality and user experience, with hands-on experience in manual testing, automation using Selenium, API testing with Postman, and web development using React.js. Built real-world web and QA projects, and committed to delivering high-quality software and contributing to team success.
-                      I believe in continuous learning and staying updated with the latest technologies and testing
-                      frameworks. My approach combines technical expertise with attention to detail to deliver
-                      high-quality software solutions.
-
+                      MCA graduate passionate about software quality and user experience, with hands-on experience in
+                      manual testing, automation using Selenium, API testing with Postman, and web development using
+                      React.js. Built real-world web and QA projects, and committed to delivering high-quality software
+                      and contributing to team success.
                     </p>
                     <p
                       style={{
-                        fontSize: "1.2rem",
-                        color: "#ccc",
-                        lineHeight: "1.8",
+                        fontSize: "1.1rem",
+                        color: "#999",
+                        lineHeight: "1.7",
                         marginBottom: "2rem",
-                        textAlign: "justify",// Indents the first line
+                        textAlign: "justify",
                       }}
                     >
                       I believe in continuous learning and staying updated with the latest technologies and testing
                       frameworks. My approach combines technical expertise with attention to detail to deliver
                       high-quality software solutions.
                     </p>
-                    
+                    <p
+                      style={{
+                        fontSize: "1.1rem",
+                        color: "#999",
+                        lineHeight: "1.7",
+                        textAlign: "justify",
+                      }}
+                    >
+                      My expertise spans across manual testing, automation testing with Selenium, API testing with
+                      Postman, and web development using modern frameworks like React.js. I'm committed to delivering
+                      high-quality software solutions and contributing to team success.
+                    </p>
                   </div>
                 </div>
                 {/* Back to Home Button */}
@@ -965,14 +984,16 @@ export default function AnimatedPortfolio() {
                       overflow: "hidden",
                     }}
                     onMouseEnter={(e) => {
-                      e.target.style.transform = "translateY(-4px) scale(1.08)"
-                      e.target.style.boxShadow = "0 20px 40px rgba(96, 165, 250, 0.5)"
-                      e.target.style.filter = "brightness(1.1)"
+                      const target = e.target as HTMLElement
+                      target.style.transform = "translateY(-4px) scale(1.08)"
+                      target.style.boxShadow = "0 20px 40px rgba(96, 165, 250, 0.5)"
+                      target.style.filter = "brightness(1.1)"
                     }}
                     onMouseLeave={(e) => {
-                      e.target.style.transform = "translateY(0) scale(1)"
-                      e.target.style.boxShadow = "none"
-                      e.target.style.filter = "brightness(1)"
+                      const target = e.target as HTMLElement
+                      target.style.transform = "translateY(0) scale(1)"
+                      target.style.boxShadow = "none"
+                      target.style.filter = "brightness(1)"
                     }}
                   >
                     ← Back to Home
@@ -1118,18 +1139,20 @@ export default function AnimatedPortfolio() {
                               opacity: 0,
                             }}
                             onMouseEnter={(e) => {
-                              e.target.style.background = "rgba(96, 165, 250, 0.2)"
-                              e.target.style.color = "#60a5fa"
-                              e.target.style.transform = "translateY(-2px) scale(1.05)"
-                              e.target.style.boxShadow = "0 5px 15px rgba(96, 165, 250, 0.3)"
-                              e.target.style.borderColor = "rgba(96, 165, 250, 0.6)"
+                              const target = e.target as HTMLElement
+                              target.style.background = "rgba(96, 165, 250, 0.2)"
+                              target.style.color = "#60a5fa"
+                              target.style.transform = "translateY(-2px) scale(1.05)"
+                              target.style.boxShadow = "0 5px 15px rgba(96, 165, 250, 0.3)"
+                              target.style.borderColor = "rgba(96, 165, 250, 0.6)"
                             }}
                             onMouseLeave={(e) => {
-                              e.target.style.background = "rgba(96, 165, 250, 0.1)"
-                              e.target.style.color = "#ccc"
-                              e.target.style.transform = "translateY(0) scale(1)"
-                              e.target.style.boxShadow = "none"
-                              e.target.style.borderColor = "rgba(96, 165, 250, 0.3)"
+                              const target = e.target as HTMLElement
+                              target.style.background = "rgba(96, 165, 250, 0.1)"
+                              target.style.color = "#ccc"
+                              target.style.transform = "translateY(0) scale(1)"
+                              target.style.boxShadow = "none"
+                              target.style.borderColor = "rgba(96, 165, 250, 0.3)"
                             }}
                           >
                             {skill}
@@ -1163,14 +1186,16 @@ export default function AnimatedPortfolio() {
                       overflow: "hidden",
                     }}
                     onMouseEnter={(e) => {
-                      e.target.style.transform = "translateY(-4px) scale(1.08)"
-                      e.target.style.boxShadow = "0 20px 40px rgba(96, 165, 250, 0.5)"
-                      e.target.style.filter = "brightness(1.1)"
+                      const target = e.target as HTMLElement
+                      target.style.transform = "translateY(-4px) scale(1.08)"
+                      target.style.boxShadow = "0 20px 40px rgba(96, 165, 250, 0.5)"
+                      target.style.filter = "brightness(1.1)"
                     }}
                     onMouseLeave={(e) => {
-                      e.target.style.transform = "translateY(0) scale(1)"
-                      e.target.style.boxShadow = "none"
-                      e.target.style.filter = "brightness(1)"
+                      const target = e.target as HTMLElement
+                      target.style.transform = "translateY(0) scale(1)"
+                      target.style.boxShadow = "none"
+                      target.style.filter = "brightness(1)"
                     }}
                   >
                     ← Back to Home
@@ -1340,14 +1365,16 @@ export default function AnimatedPortfolio() {
                       overflow: "hidden",
                     }}
                     onMouseEnter={(e) => {
-                      e.target.style.transform = "translateY(-4px) scale(1.08)"
-                      e.target.style.boxShadow = "0 20px 40px rgba(96, 165, 250, 0.5)"
-                      e.target.style.filter = "brightness(1.1)"
+                      const target = e.currentTarget as HTMLElement
+                      target.style.transform = "translateY(-4px) scale(1.08)"
+                      target.style.boxShadow = "0 20px 40px rgba(96, 165, 250, 0.5)"
+                      target.style.filter = "brightness(1.1)"
                     }}
                     onMouseLeave={(e) => {
-                      e.target.style.transform = "translateY(0) scale(1)"
-                      e.target.style.boxShadow = "none"
-                      e.target.style.filter = "brightness(1)"
+                      const target = e.currentTarget as HTMLElement
+                      target.style.transform = "translateY(0) scale(1)"
+                      target.style.boxShadow = "none"
+                      target.style.filter = "brightness(1)"
                     }}
                   >
                     ← Back to Home
@@ -1558,14 +1585,16 @@ export default function AnimatedPortfolio() {
                       overflow: "hidden",
                     }}
                     onMouseEnter={(e) => {
-                      e.target.style.transform = "translateY(-4px) scale(1.08)"
-                      e.target.style.boxShadow = "0 20px 40px rgba(96, 165, 250, 0.5)"
-                      e.target.style.filter = "brightness(1.1)"
+                      const target = e.target as HTMLElement
+                      target.style.transform = "translateY(-4px) scale(1.08)"
+                      target.style.boxShadow = "0 20px 40px rgba(96, 165, 250, 0.5)"
+                      target.style.filter = "brightness(1.1)"
                     }}
                     onMouseLeave={(e) => {
-                      e.target.style.transform = "translateY(0) scale(1)"
-                      e.target.style.boxShadow = "none"
-                      e.target.style.filter = "brightness(1)"
+                      const target = e.target as HTMLElement
+                      target.style.transform = "translateY(0) scale(1)"
+                      target.style.boxShadow = "none"
+                      target.style.filter = "brightness(1)"
                     }}
                   >
                     ← Back to Home
@@ -1864,8 +1893,8 @@ export default function AnimatedPortfolio() {
                                   animation: `particleOrbit ${2 + particleIndex * 0.2}s linear infinite ${particleIndex * 0.25}s`,
                                   transformOrigin: "0 0",
                                   boxShadow: "0 0 6px #fff",
+                                  transform: `rotate(${particleIndex * 45}deg) translateX(60px)`,
                                 }}
-                                transform={`rotate(${particleIndex * 45}deg) translateX(60px)`}
                               />
                             ))}
                           </div>
@@ -1956,17 +1985,19 @@ export default function AnimatedPortfolio() {
                               transform: "perspective(1000px) rotateX(0deg)",
                             }}
                             onMouseEnter={(e) => {
-                              e.target.style.transform =
+                              const target = e.currentTarget as HTMLElement
+                              target.style.transform =
                                 "perspective(1000px) rotateX(-10deg) translateY(-5px) scale(1.05)"
-                              e.target.style.boxShadow = `0 20px 40px rgba(${
+                              target.style.boxShadow = `0 20px 40px rgba(${
                                 index % 3 === 0 ? "96, 165, 250" : index % 3 === 1 ? "167, 139, 250" : "245, 158, 11"
                               }, 0.5)`
-                              e.target.style.filter = "brightness(1.1) saturate(1.2)"
+                              target.style.filter = "brightness(1.1) saturate(1.2)"
                             }}
                             onMouseLeave={(e) => {
-                              e.target.style.transform = "perspective(1000px) rotateX(0deg) translateY(0) scale(1)"
-                              e.target.style.boxShadow = "none"
-                              e.target.style.filter = "brightness(1) saturate(1)"
+                              const target = e.currentTarget as HTMLElement
+                              target.style.transform = "perspective(1000px) rotateX(0deg) translateY(0) scale(1)"
+                              target.style.boxShadow = "none"
+                              target.style.filter = "brightness(1) saturate(1)"
                             }}
                           >
                             {/* Button Shine Effect */}
@@ -2021,14 +2052,16 @@ export default function AnimatedPortfolio() {
                       overflow: "hidden",
                     }}
                     onMouseEnter={(e) => {
-                      e.target.style.transform = "translateY(-4px) scale(1.08)"
-                      e.target.style.boxShadow = "0 20px 40px rgba(96, 165, 250, 0.5)"
-                      e.target.style.filter = "brightness(1.1)"
+                      const target = e.target as HTMLElement
+                      target.style.transform = "translateY(-4px) scale(1.08)"
+                      target.style.boxShadow = "0 20px 40px rgba(96, 165, 250, 0.5)"
+                      target.style.filter = "brightness(1.1)"
                     }}
                     onMouseLeave={(e) => {
-                      e.target.style.transform = "translateY(0) scale(1)"
-                      e.target.style.boxShadow = "none"
-                      e.target.style.filter = "brightness(1)"
+                      const target = e.target as HTMLElement
+                      target.style.transform = "translateY(0) scale(1)"
+                      target.style.boxShadow = "none"
+                      target.style.filter = "brightness(1)"
                     }}
                   >
                     ← Back to Home
