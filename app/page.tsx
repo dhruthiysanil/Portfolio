@@ -904,7 +904,7 @@ export default function AnimatedPortfolio() {
                       }}
                     >
                       <img
-                        src="/placeholder.svg?height=272&width=272"
+                        src="/pic.jpeg"
                         alt="Dhruthi Y Sanil"
                         style={{
                           width: "272px",
@@ -953,9 +953,8 @@ export default function AnimatedPortfolio() {
                         textAlign: "justify",
                       }}
                     >
-                      My expertise spans across manual testing, automation testing with Selenium, API testing with
-                      Postman, and web development using modern frameworks like React.js. I'm committed to delivering
-                      high-quality software solutions and contributing to team success.
+                     
+                
                     </p>
                   </div>
                 </div>
