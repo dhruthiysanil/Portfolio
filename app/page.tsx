@@ -44,7 +44,8 @@ export default function AnimatedPortfolio() {
 
   // Enhanced mouse tracking with movement detection
   useEffect(() => {
-    let moveTimeout
+    let moveTimeout: NodeJS.Timeout
+
     const handleMouseMove = (e) => {
       setMousePosition({ x: e.clientX, y: e.clientY })
       setIsMouseMoving(true)
