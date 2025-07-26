@@ -1,6 +1,19 @@
 "use client"
 import { useState, useEffect } from "react"
-import { Linkedin, Mail, Github, ExternalLink, Award, Star, Zap, Target, Rocket, Gem, Flame } from "lucide-react"
+import {
+  Linkedin,
+  Mail,
+  Github,
+  ExternalLink,
+  Award,
+  Star,
+  Zap,
+  Target,
+  Rocket,
+  Gem,
+  Flame,
+  GraduationCap,
+} from "lucide-react"
 
 export default function AnimatedPortfolio() {
   const [animationStep, setAnimationStep] = useState(0)
@@ -101,6 +114,28 @@ export default function AnimatedPortfolio() {
       duration: "January 2025 – May 2025",
       description:
         "Developed a responsive website using HTML, CSS, JavaScript, and React.js focusing on user experience.",
+    },
+  ]
+
+  const educationData = [
+    {
+      institution: "Manipal Institute of Technology",
+      degree: "MCA (Master of Computer Applications)",
+      duration: "2023 - 2025",
+      description: "Specialized in advanced computer applications, software development, and emerging technologies.",
+    },
+    {
+      institution: "Canara College, Mangalore",
+      degree: "BCA (Bachelor of Computer Applications)",
+      duration: "2020 - 2023",
+      description:
+        "Focused on computer science fundamentals, programming languages, and software development principles.",
+    },
+    {
+      institution: "Govindasa College",
+      degree: "PU (Pre-University)",
+      duration: "2018 - 2020",
+      description: " Completed Pre-University Education Focused on Commerce with Statistics ",
     },
   ]
 
@@ -581,7 +616,7 @@ export default function AnimatedPortfolio() {
               </div>
               {/* Navigation on Right */}
               <nav style={{ display: "flex", gap: "2.5rem" }}>
-                {["About", "Skills", "Projects", "Experience", "Certificates"].map((item, index) => (
+                {["About", "Skills", "Projects", "Experience", "Education", "Certificates"].map((item, index) => (
                   <button
                     key={item}
                     onClick={() => handleNavClick(item)}
@@ -690,7 +725,7 @@ export default function AnimatedPortfolio() {
                       marginBottom: "3rem",
                     }}
                   >
-                    
+                  
                   </p>
                 </div>
                 {/* Action Buttons */}
@@ -934,9 +969,9 @@ export default function AnimatedPortfolio() {
                     </p>
                     <p
                       style={{
-                        fontSize: "1.1rem",
-                        color: "#999",
-                        lineHeight: "1.7",
+                        fontSize: "1.2rem",
+                        color: "#ccc",
+                        lineHeight: "1.8",
                         marginBottom: "2rem",
                         textAlign: "justify",
                       }}
@@ -954,7 +989,6 @@ export default function AnimatedPortfolio() {
                       }}
                     >
                      
-                
                     </p>
                   </div>
                 </div>
@@ -1554,6 +1588,221 @@ export default function AnimatedPortfolio() {
                           }}
                         >
                           {experience.description}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+                {/* Back to Home Button */}
+                <div
+                  style={{
+                    textAlign: "center",
+                    marginTop: "3rem",
+                    animation: "fadeInUp 1s ease-out 1s both",
+                    opacity: 0,
+                  }}
+                >
+                  <button
+                    onClick={() => handleNavClick("home")}
+                    style={{
+                      background: "linear-gradient(135deg, #60a5fa, #3b82f6)",
+                      color: "white",
+                      border: "none",
+                      padding: "14px 28px",
+                      borderRadius: "10px",
+                      fontSize: "1rem",
+                      fontWeight: "600",
+                      cursor: "pointer",
+                      transition: "all 0.3s ease",
+                      position: "relative",
+                      overflow: "hidden",
+                    }}
+                    onMouseEnter={(e) => {
+                      const target = e.target as HTMLElement
+                      target.style.transform = "translateY(-4px) scale(1.08)"
+                      target.style.boxShadow = "0 20px 40px rgba(96, 165, 250, 0.5)"
+                      target.style.filter = "brightness(1.1)"
+                    }}
+                    onMouseLeave={(e) => {
+                      const target = e.target as HTMLElement
+                      target.style.transform = "translateY(0) scale(1)"
+                      target.style.boxShadow = "none"
+                      target.style.filter = "brightness(1)"
+                    }}
+                  >
+                    ← Back to Home
+                  </button>
+                </div>
+              </div>
+            </main>
+          )}
+
+          {/* Education Section */}
+          {activeSection === "education" && (
+            <main
+              style={{
+                paddingTop: "120px",
+                minHeight: "100vh",
+                padding: "120px 2rem 4rem",
+                animation: "fadeInUp 0.8s ease-out",
+              }}
+            >
+              <div
+                style={{
+                  maxWidth: "1000px",
+                  margin: "0 auto",
+                }}
+              >
+                {/* Education Header */}
+                <div
+                  style={{
+                    textAlign: "center",
+                    marginBottom: "4rem",
+                    animation: "fadeInUp 1s ease-out 0.2s both",
+                    opacity: 0,
+                  }}
+                >
+                  <h1
+                    style={{
+                      fontSize: "clamp(2.5rem, 6vw, 4rem)",
+                      fontWeight: "bold",
+                      marginBottom: "1rem",
+                      background: "linear-gradient(135deg, #60a5fa, #a78bfa, #f59e0b)",
+                      WebkitBackgroundClip: "text",
+                      WebkitTextFillColor: "transparent",
+                      backgroundClip: "text",
+                      backgroundSize: "200% 200%",
+                      animation: "gradientShift 3s ease infinite",
+                    }}
+                  >
+                    Education
+                  </h1>
+                  <p
+                    style={{
+                      fontSize: "1.2rem",
+                      color: "#999",
+                      maxWidth: "600px",
+                      margin: "0 auto",
+                      lineHeight: "1.6",
+                    }}
+                  >
+                    My academic journey and educational background
+                  </p>
+                </div>
+                {/* Education Timeline */}
+                <div
+                  style={{
+                    position: "relative",
+                    paddingLeft: "2rem",
+                  }}
+                >
+                  {/* Timeline Line */}
+                  <div
+                    style={{
+                      position: "absolute",
+                      left: "1rem",
+                      top: "0",
+                      bottom: "0",
+                      width: "2px",
+                      background: "linear-gradient(180deg, #60a5fa, #a78bfa, #f59e0b)",
+                    }}
+                  />
+                  {educationData.map((education, index) => (
+                    <div
+                      key={education.institution}
+                      style={{
+                        position: "relative",
+                        marginBottom: "3rem",
+                        animation: `fadeInUp 0.8s ease-out ${0.4 + index * 0.2}s both`,
+                        opacity: 0,
+                      }}
+                    >
+                      {/* Timeline Dot */}
+                      <div
+                        style={{
+                          position: "absolute",
+                          left: "-2rem",
+                          top: "1rem",
+                          width: "16px",
+                          height: "16px",
+                          borderRadius: "50%",
+                          background: index === 0 ? "#60a5fa" : index === 1 ? "#a78bfa" : "#f59e0b",
+                          border: "3px solid #000",
+                          boxShadow: `0 0 20px ${index === 0 ? "#60a5fa" : index === 1 ? "#a78bfa" : "#f59e0b"}`,
+                        }}
+                      />
+                      {/* Education Card */}
+                      <div
+                        style={{
+                          background: "rgba(255, 255, 255, 0.05)",
+                          backdropFilter: "blur(10px)",
+                          border: "1px solid rgba(96, 165, 250, 0.2)",
+                          borderRadius: "15px",
+                          padding: "2rem",
+                          transition: "all 0.3s ease",
+                          marginLeft: "1rem",
+                        }}
+                        onMouseEnter={(e) => {
+                          e.currentTarget.style.transform = "translateY(-5px) scale(1.02)"
+                          e.currentTarget.style.boxShadow = "0 20px 40px rgba(96, 165, 250, 0.3)"
+                          e.currentTarget.style.borderColor = "rgba(96, 165, 250, 0.5)"
+                        }}
+                        onMouseLeave={(e) => {
+                          e.currentTarget.style.transform = "translateY(0) scale(1)"
+                          e.currentTarget.style.boxShadow = "none"
+                          e.currentTarget.style.borderColor = "rgba(96, 165, 250, 0.2)"
+                        }}
+                      >
+                        {/* Institution and Degree */}
+                        <div style={{ marginBottom: "1rem" }}>
+                          <h3
+                            style={{
+                              fontSize: "1.5rem",
+                              fontWeight: "bold",
+                              color: "#60a5fa",
+                              marginBottom: "0.5rem",
+                            }}
+                          >
+                            {education.institution}
+                          </h3>
+                          <h4
+                            style={{
+                              fontSize: "1.2rem",
+                              color: "#a78bfa",
+                              fontWeight: "600",
+                              marginBottom: "0.5rem",
+                            }}
+                          >
+                            {education.degree}
+                          </h4>
+                          <div style={{ display: "flex", gap: "1rem", alignItems: "center" }}>
+                            <span
+                              style={{
+                                fontSize: "0.9rem",
+                                color: "#f59e0b",
+                                background: "rgba(245, 158, 11, 0.1)",
+                                padding: "0.3rem 0.8rem",
+                                borderRadius: "12px",
+                                border: "1px solid rgba(245, 158, 11, 0.3)",
+                                display: "flex",
+                                alignItems: "center",
+                                gap: "0.5rem",
+                              }}
+                            >
+                              <GraduationCap size={16} />
+                              {education.duration}
+                            </span>
+                          </div>
+                        </div>
+                        {/* Description */}
+                        <p
+                          style={{
+                            fontSize: "1rem",
+                            color: "#ccc",
+                            lineHeight: "1.7",
+                          }}
+                        >
+                          {education.description}
                         </p>
                       </div>
                     </div>
