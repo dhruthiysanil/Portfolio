@@ -572,7 +572,7 @@ export default function AnimatedPortfolio() {
               background: "rgba(0, 0, 0, 0.95)",
               backdropFilter: "blur(15px)",
               borderBottom: "1px solid #333",
-              padding: "0.75rem 0",
+              padding: "0.6rem 0",
               animation: "slideDown 0.8s ease-out 0.5s both",
               transform: "translateY(-100px)",
             }}
@@ -586,13 +586,13 @@ export default function AnimatedPortfolio() {
                 justifyContent: "space-between",
                 alignItems: "center",
                 flexWrap: "wrap",
-                gap: "1rem",
+                gap: "0.8rem",
               }}
             >
               {/* Logo/Name on Left */}
               <div
                 style={{
-                  fontSize: "clamp(1.3rem, 3.5vw, 1.8rem)",
+                  fontSize: "clamp(1.2rem, 3vw, 1.6rem)",
                   fontWeight: "bold",
                   background: "linear-gradient(135deg, #60a5fa, #a78bfa)",
                   WebkitBackgroundClip: "text",
@@ -621,7 +621,7 @@ export default function AnimatedPortfolio() {
               <nav
                 style={{
                   display: "flex",
-                  gap: "clamp(0.3rem, 1.5vw, 1.5rem)",
+                  gap: "clamp(0.2rem, 1.2vw, 1.2rem)",
                   flexWrap: "wrap",
                   justifyContent: "center",
                   alignItems: "center",
@@ -636,14 +636,14 @@ export default function AnimatedPortfolio() {
                       border: "none",
                       color: activeSection === item.toLowerCase() ? "#60a5fa" : "#ccc",
                       textDecoration: "none",
-                      fontSize: "clamp(0.75rem, 2vw, 1rem)",
+                      fontSize: "clamp(0.7rem, 1.8vw, 0.9rem)",
                       fontWeight: "500",
                       position: "relative",
                       transition: "all 0.3s ease",
                       animation: `fadeInNav 0.5s ease-out ${0.8 + index * 0.1}s both`,
                       opacity: 0,
-                      padding: "0.4rem 0.6rem",
-                      borderRadius: "6px",
+                      padding: "0.3rem 0.5rem",
+                      borderRadius: "5px",
                       cursor: "pointer",
                       whiteSpace: "nowrap",
                       minWidth: "fit-content",
@@ -674,12 +674,12 @@ export default function AnimatedPortfolio() {
           {activeSection === "home" && (
             <main
               style={{
-                paddingTop: "100px",
+                paddingTop: "80px",
                 minHeight: "100vh",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                padding: "100px 1rem 2rem",
+                padding: "80px 1rem 2rem",
               }}
             >
               <div
@@ -896,9 +896,9 @@ export default function AnimatedPortfolio() {
           {activeSection === "about" && (
             <main
               style={{
-                paddingTop: "100px",
+                paddingTop: "80px",
                 minHeight: "100vh",
-                padding: "100px 1rem 4rem",
+                padding: "80px 1rem 4rem",
                 animation: "fadeInUp 0.8s ease-out",
               }}
             >
@@ -912,14 +912,14 @@ export default function AnimatedPortfolio() {
                 <div
                   style={{
                     textAlign: "center",
-                    marginBottom: "3rem",
+                    marginBottom: "2.5rem",
                     animation: "fadeInUp 1s ease-out 0.2s both",
                     opacity: 0,
                   }}
                 >
                   <h1
                     style={{
-                      fontSize: "clamp(2rem, 8vw, 3.5rem)",
+                      fontSize: "clamp(1.8rem, 7vw, 3rem)",
                       fontWeight: "bold",
                       marginBottom: "1rem",
                       background: "linear-gradient(135deg, #60a5fa, #a78bfa, #f59e0b)",
@@ -938,7 +938,7 @@ export default function AnimatedPortfolio() {
                   style={{
                     display: "grid",
                     gridTemplateColumns: window.innerWidth > 768 ? "1fr 2fr" : "1fr",
-                    gap: "3rem",
+                    gap: "2.5rem",
                     alignItems: "center",
                     animation: "fadeInUp 1s ease-out 0.4s both",
                     opacity: 0,
@@ -954,8 +954,8 @@ export default function AnimatedPortfolio() {
                   >
                     <div
                       style={{
-                        width: "clamp(180px, 40vw, 250px)",
-                        height: "clamp(180px, 40vw, 250px)",
+                        width: "clamp(160px, 35vw, 220px)",
+                        height: "clamp(160px, 35vw, 220px)",
                         borderRadius: "50%",
                         background: "linear-gradient(135deg, #60a5fa, #a78bfa, #f59e0b)",
                         padding: "4px",
@@ -982,10 +982,10 @@ export default function AnimatedPortfolio() {
                   <div>
                     <p
                       style={{
-                        fontSize: "clamp(0.95rem, 2.8vw, 1.1rem)",
+                        fontSize: "clamp(0.9rem, 2.5vw, 1.05rem)",
                         color: "#ccc",
-                        lineHeight: "1.7",
-                        marginBottom: "1.5rem",
+                        lineHeight: "1.6",
+                        marginBottom: "1.3rem",
                         textAlign: "justify",
                       }}
                     >
@@ -995,27 +995,28 @@ export default function AnimatedPortfolio() {
                       and contributing to team success.
                     </p>
                     <p
-                     style={{
-                        fontSize: "clamp(0.95rem, 2.8vw, 1.1rem)",
+                      style={{
+                        fontSize: "clamp(0.9rem, 2.5vw, 1.05rem)",
                         color: "#ccc",
-                        lineHeight: "1.7",
-                        marginBottom: "1.5rem",
+                        lineHeight: "1.6",
+                        marginBottom: "1.3rem",
                         textAlign: "justify",
                       }}
                     >
-                      I believe in continuous learning and staying updated with the latest technologies and testing
-                      frameworks. My approach combines technical expertise with attention to detail to deliver
-                      high-quality software solutions.
+                     
                     </p>
                     <p
                       style={{
-                        fontSize: "clamp(0.9rem, 2.5vw, 1rem)",
-                        color: "#999",
+                        fontSize: "clamp(0.9rem, 2.5vw, 1.05rem)",
+                        color: "#ccc",
                         lineHeight: "1.6",
+                        marginBottom: "1.3rem",
                         textAlign: "justify",
                       }}
                     >
-                      
+                      My expertise spans across manual testing, automation testing with Selenium, API testing with
+                      Postman, and web development using modern frameworks like React.js. I'm committed to delivering
+                      high-quality software solutions and contributing to team success.
                     </p>
                   </div>
                 </div>
@@ -1023,7 +1024,7 @@ export default function AnimatedPortfolio() {
                 <div
                   style={{
                     textAlign: "center",
-                    marginTop: "3rem",
+                    marginTop: "2.5rem",
                     animation: "fadeInUp 1s ease-out 0.8s both",
                     opacity: 0,
                   }}
@@ -1034,9 +1035,9 @@ export default function AnimatedPortfolio() {
                       background: "linear-gradient(135deg, #60a5fa, #3b82f6)",
                       color: "white",
                       border: "none",
-                      padding: "12px 24px",
+                      padding: "10px 20px",
                       borderRadius: "8px",
-                      fontSize: "clamp(0.85rem, 2.2vw, 0.95rem)",
+                      fontSize: "clamp(0.8rem, 2vw, 0.9rem)",
                       fontWeight: "600",
                       cursor: "pointer",
                       transition: "all 0.3s ease",
@@ -1067,9 +1068,9 @@ export default function AnimatedPortfolio() {
           {activeSection === "skills" && (
             <main
               style={{
-                paddingTop: "100px",
+                paddingTop: "80px",
                 minHeight: "100vh",
-                padding: "100px 1rem 4rem",
+                padding: "80px 1rem 4rem",
                 animation: "fadeInUp 0.8s ease-out",
               }}
             >
@@ -1083,14 +1084,14 @@ export default function AnimatedPortfolio() {
                 <div
                   style={{
                     textAlign: "center",
-                    marginBottom: "3rem",
+                    marginBottom: "2.5rem",
                     animation: "fadeInUp 1s ease-out 0.2s both",
                     opacity: 0,
                   }}
                 >
                   <h1
                     style={{
-                      fontSize: "clamp(2rem, 8vw, 3.5rem)",
+                      fontSize: "clamp(1.8rem, 7vw, 3rem)",
                       fontWeight: "bold",
                       marginBottom: "1rem",
                       background: "linear-gradient(135deg, #60a5fa, #a78bfa, #f59e0b)",
@@ -1105,11 +1106,11 @@ export default function AnimatedPortfolio() {
                   </h1>
                   <p
                     style={{
-                      fontSize: "clamp(0.9rem, 2.5vw, 1.1rem)",
+                      fontSize: "clamp(0.85rem, 2.2vw, 1rem)",
                       color: "#999",
                       maxWidth: "600px",
                       margin: "0 auto",
-                      lineHeight: "1.6",
+                      lineHeight: "1.5",
                     }}
                   >
                     A comprehensive overview of my technical expertise and professional capabilities
@@ -1119,9 +1120,9 @@ export default function AnimatedPortfolio() {
                 <div
                   style={{
                     display: "grid",
-                    gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-                    gap: "1.5rem",
-                    marginBottom: "3rem",
+                    gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+                    gap: "1.3rem",
+                    marginBottom: "2.5rem",
                   }}
                 >
                   {Object.entries(skillsData).map(([category, skills], categoryIndex) => (
@@ -1132,7 +1133,7 @@ export default function AnimatedPortfolio() {
                         backdropFilter: "blur(10px)",
                         border: "1px solid rgba(96, 165, 250, 0.2)",
                         borderRadius: "15px",
-                        padding: "1.5rem",
+                        padding: "1.3rem",
                         transition: "all 0.3s ease",
                         animation: `fadeInUp 0.8s ease-out ${0.4 + categoryIndex * 0.1}s both`,
                         opacity: 0,
@@ -1140,8 +1141,8 @@ export default function AnimatedPortfolio() {
                         overflow: "hidden",
                       }}
                       onMouseEnter={(e) => {
-                        e.currentTarget.style.transform = "translateY(-5px) scale(1.02)"
-                        e.currentTarget.style.boxShadow = "0 15px 30px rgba(96, 165, 250, 0.3)"
+                        e.currentTarget.style.transform = "translateY(-4px) scale(1.02)"
+                        e.currentTarget.style.boxShadow = "0 12px 25px rgba(96, 165, 250, 0.3)"
                         e.currentTarget.style.borderColor = "rgba(96, 165, 250, 0.5)"
                       }}
                       onMouseLeave={(e) => {
@@ -1153,12 +1154,12 @@ export default function AnimatedPortfolio() {
                       {/* Category Header */}
                       <h3
                         style={{
-                          fontSize: "clamp(1rem, 2.8vw, 1.2rem)",
+                          fontSize: "clamp(0.95rem, 2.5vw, 1.1rem)",
                           fontWeight: "bold",
-                          marginBottom: "1rem",
+                          marginBottom: "0.8rem",
                           color: "#60a5fa",
                           position: "relative",
-                          paddingBottom: "0.5rem",
+                          paddingBottom: "0.4rem",
                         }}
                       >
                         {category}
@@ -1167,7 +1168,7 @@ export default function AnimatedPortfolio() {
                             position: "absolute",
                             bottom: 0,
                             left: 0,
-                            width: "40px",
+                            width: "35px",
                             height: "2px",
                             background: "linear-gradient(90deg, #60a5fa, #a78bfa)",
                             borderRadius: "1px",
@@ -1179,7 +1180,7 @@ export default function AnimatedPortfolio() {
                         style={{
                           display: "flex",
                           flexWrap: "wrap",
-                          gap: "0.6rem",
+                          gap: "0.5rem",
                         }}
                       >
                         {skills.map((skill, skillIndex) => (
@@ -1188,9 +1189,9 @@ export default function AnimatedPortfolio() {
                             style={{
                               background: "rgba(96, 165, 250, 0.1)",
                               color: "#ccc",
-                              padding: "0.4rem 0.8rem",
-                              borderRadius: "15px",
-                              fontSize: "clamp(0.7rem, 1.8vw, 0.85rem)",
+                              padding: "0.35rem 0.7rem",
+                              borderRadius: "12px",
+                              fontSize: "clamp(0.65rem, 1.6vw, 0.8rem)",
                               fontWeight: "500",
                               border: "1px solid rgba(96, 165, 250, 0.3)",
                               transition: "all 0.3s ease",
@@ -1203,7 +1204,7 @@ export default function AnimatedPortfolio() {
                               target.style.background = "rgba(96, 165, 250, 0.2)"
                               target.style.color = "#60a5fa"
                               target.style.transform = "translateY(-2px) scale(1.05)"
-                              target.style.boxShadow = "0 4px 12px rgba(96, 165, 250, 0.3)"
+                              target.style.boxShadow = "0 3px 10px rgba(96, 165, 250, 0.3)"
                               target.style.borderColor = "rgba(96, 165, 250, 0.6)"
                             }}
                             onMouseLeave={(e) => {
@@ -1236,9 +1237,9 @@ export default function AnimatedPortfolio() {
                       background: "linear-gradient(135deg, #60a5fa, #3b82f6)",
                       color: "white",
                       border: "none",
-                      padding: "12px 24px",
+                      padding: "10px 20px",
                       borderRadius: "8px",
-                      fontSize: "clamp(0.85rem, 2.2vw, 0.95rem)",
+                      fontSize: "clamp(0.8rem, 2vw, 0.9rem)",
                       fontWeight: "600",
                       cursor: "pointer",
                       transition: "all 0.3s ease",
@@ -1269,9 +1270,9 @@ export default function AnimatedPortfolio() {
           {activeSection === "projects" && (
             <main
               style={{
-                paddingTop: "100px",
+                paddingTop: "80px",
                 minHeight: "100vh",
-                padding: "100px 1rem 4rem",
+                padding: "80px 1rem 4rem",
                 animation: "fadeInUp 0.8s ease-out",
               }}
             >
@@ -1285,14 +1286,14 @@ export default function AnimatedPortfolio() {
                 <div
                   style={{
                     textAlign: "center",
-                    marginBottom: "3rem",
+                    marginBottom: "2.5rem",
                     animation: "fadeInUp 1s ease-out 0.2s both",
                     opacity: 0,
                   }}
                 >
                   <h1
                     style={{
-                      fontSize: "clamp(2rem, 8vw, 3.5rem)",
+                      fontSize: "clamp(1.8rem, 7vw, 3rem)",
                       fontWeight: "bold",
                       marginBottom: "1rem",
                       background: "linear-gradient(135deg, #60a5fa, #a78bfa, #f59e0b)",
@@ -1307,11 +1308,11 @@ export default function AnimatedPortfolio() {
                   </h1>
                   <p
                     style={{
-                      fontSize: "clamp(0.9rem, 2.5vw, 1.1rem)",
+                      fontSize: "clamp(0.85rem, 2.2vw, 1rem)",
                       color: "#999",
                       maxWidth: "600px",
                       margin: "0 auto",
-                      lineHeight: "1.6",
+                      lineHeight: "1.5",
                     }}
                   >
                     A showcase of my development and testing projects
@@ -1321,9 +1322,9 @@ export default function AnimatedPortfolio() {
                 <div
                   style={{
                     display: "grid",
-                    gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))",
-                    gap: "2rem",
-                    marginBottom: "3rem",
+                    gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))",
+                    gap: "1.8rem",
+                    marginBottom: "2.5rem",
                   }}
                 >
                   {projectsData.map((project, index) => (
@@ -1334,7 +1335,7 @@ export default function AnimatedPortfolio() {
                         backdropFilter: "blur(10px)",
                         border: "1px solid rgba(96, 165, 250, 0.2)",
                         borderRadius: "20px",
-                        padding: "2rem",
+                        padding: "1.8rem",
                         transition: "all 0.3s ease",
                         animation: `fadeInUp 0.8s ease-out ${0.4 + index * 0.2}s both`,
                         opacity: 0,
@@ -1342,8 +1343,8 @@ export default function AnimatedPortfolio() {
                         overflow: "hidden",
                       }}
                       onMouseEnter={(e) => {
-                        e.currentTarget.style.transform = "translateY(-8px) scale(1.02)"
-                        e.currentTarget.style.boxShadow = "0 20px 40px rgba(96, 165, 250, 0.3)"
+                        e.currentTarget.style.transform = "translateY(-6px) scale(1.02)"
+                        e.currentTarget.style.boxShadow = "0 18px 35px rgba(96, 165, 250, 0.3)"
                         e.currentTarget.style.borderColor = "rgba(96, 165, 250, 0.5)"
                       }}
                       onMouseLeave={(e) => {
@@ -1353,34 +1354,34 @@ export default function AnimatedPortfolio() {
                       }}
                     >
                       {/* Project Header */}
-                      <div style={{ marginBottom: "1.5rem" }}>
+                      <div style={{ marginBottom: "1.3rem" }}>
                         <h3
                           style={{
-                            fontSize: "clamp(1.3rem, 3.5vw, 1.6rem)",
+                            fontSize: "clamp(1.2rem, 3.2vw, 1.5rem)",
                             fontWeight: "bold",
                             color: "#60a5fa",
-                            marginBottom: "0.5rem",
+                            marginBottom: "0.4rem",
                           }}
                         >
                           {project.name}
                         </h3>
                         <p
                           style={{
-                            fontSize: "clamp(0.95rem, 2.5vw, 1.05rem)",
+                            fontSize: "clamp(0.9rem, 2.3vw, 1rem)",
                             color: "#a78bfa",
                             fontWeight: "500",
-                            marginBottom: "1rem",
+                            marginBottom: "0.8rem",
                           }}
                         >
                           {project.subtitle}
                         </p>
                         <div
                           style={{
-                            fontSize: "clamp(0.75rem, 1.8vw, 0.85rem)",
+                            fontSize: "clamp(0.7rem, 1.6vw, 0.8rem)",
                             color: "#f59e0b",
                             background: "rgba(245, 158, 11, 0.1)",
-                            padding: "0.4rem 0.8rem",
-                            borderRadius: "12px",
+                            padding: "0.35rem 0.7rem",
+                            borderRadius: "10px",
                             border: "1px solid rgba(245, 158, 11, 0.3)",
                             display: "inline-block",
                           }}
@@ -1391,9 +1392,9 @@ export default function AnimatedPortfolio() {
                       {/* Project Description */}
                       <p
                         style={{
-                          fontSize: "clamp(0.85rem, 2.2vw, 0.95rem)",
+                          fontSize: "clamp(0.8rem, 2vw, 0.9rem)",
                           color: "#ccc",
-                          lineHeight: "1.6",
+                          lineHeight: "1.5",
                         }}
                       >
                         {project.description}
@@ -1415,9 +1416,9 @@ export default function AnimatedPortfolio() {
                       background: "linear-gradient(135deg, #60a5fa, #3b82f6)",
                       color: "white",
                       border: "none",
-                      padding: "12px 24px",
+                      padding: "10px 20px",
                       borderRadius: "8px",
-                      fontSize: "clamp(0.85rem, 2.2vw, 0.95rem)",
+                      fontSize: "clamp(0.8rem, 2vw, 0.9rem)",
                       fontWeight: "600",
                       cursor: "pointer",
                       transition: "all 0.3s ease",
@@ -1448,9 +1449,9 @@ export default function AnimatedPortfolio() {
           {activeSection === "experience" && (
             <main
               style={{
-                paddingTop: "100px",
+                paddingTop: "80px",
                 minHeight: "100vh",
-                padding: "100px 1rem 4rem",
+                padding: "80px 1rem 4rem",
                 animation: "fadeInUp 0.8s ease-out",
               }}
             >
@@ -1464,14 +1465,14 @@ export default function AnimatedPortfolio() {
                 <div
                   style={{
                     textAlign: "center",
-                    marginBottom: "3rem",
+                    marginBottom: "2.5rem",
                     animation: "fadeInUp 1s ease-out 0.2s both",
                     opacity: 0,
                   }}
                 >
                   <h1
                     style={{
-                      fontSize: "clamp(2rem, 8vw, 3.5rem)",
+                      fontSize: "clamp(1.8rem, 7vw, 3rem)",
                       fontWeight: "bold",
                       marginBottom: "1rem",
                       background: "linear-gradient(135deg, #60a5fa, #a78bfa, #f59e0b)",
@@ -1486,11 +1487,11 @@ export default function AnimatedPortfolio() {
                   </h1>
                   <p
                     style={{
-                      fontSize: "clamp(0.9rem, 2.5vw, 1.1rem)",
+                      fontSize: "clamp(0.85rem, 2.2vw, 1rem)",
                       color: "#999",
                       maxWidth: "600px",
                       margin: "0 auto",
-                      lineHeight: "1.6",
+                      lineHeight: "1.5",
                     }}
                   >
                     My professional journey and internship experiences
@@ -1500,14 +1501,14 @@ export default function AnimatedPortfolio() {
                 <div
                   style={{
                     position: "relative",
-                    paddingLeft: window.innerWidth > 768 ? "2rem" : "1rem",
+                    paddingLeft: window.innerWidth > 768 ? "1.8rem" : "0.8rem",
                   }}
                 >
                   {/* Timeline Line */}
                   <div
                     style={{
                       position: "absolute",
-                      left: window.innerWidth > 768 ? "1rem" : "0.5rem",
+                      left: window.innerWidth > 768 ? "0.9rem" : "0.4rem",
                       top: "0",
                       bottom: "0",
                       width: "2px",
@@ -1519,7 +1520,7 @@ export default function AnimatedPortfolio() {
                       key={experience.company}
                       style={{
                         position: "relative",
-                        marginBottom: "2.5rem",
+                        marginBottom: "2rem",
                         animation: `fadeInUp 0.8s ease-out ${0.4 + index * 0.2}s both`,
                         opacity: 0,
                       }}
@@ -1528,14 +1529,14 @@ export default function AnimatedPortfolio() {
                       <div
                         style={{
                           position: "absolute",
-                          left: window.innerWidth > 768 ? "-2rem" : "-1.5rem",
-                          top: "1rem",
-                          width: "14px",
-                          height: "14px",
+                          left: window.innerWidth > 768 ? "-1.8rem" : "-1.3rem",
+                          top: "0.8rem",
+                          width: "12px",
+                          height: "12px",
                           borderRadius: "50%",
                           background: index === 0 ? "#60a5fa" : "#a78bfa",
                           border: "3px solid #000",
-                          boxShadow: `0 0 15px ${index === 0 ? "#60a5fa" : "#a78bfa"}`,
+                          boxShadow: `0 0 12px ${index === 0 ? "#60a5fa" : "#a78bfa"}`,
                         }}
                       />
                       {/* Experience Card */}
@@ -1545,13 +1546,13 @@ export default function AnimatedPortfolio() {
                           backdropFilter: "blur(10px)",
                           border: "1px solid rgba(96, 165, 250, 0.2)",
                           borderRadius: "15px",
-                          padding: "1.5rem",
+                          padding: "1.3rem",
                           transition: "all 0.3s ease",
-                          marginLeft: window.innerWidth > 768 ? "1rem" : "0.5rem",
+                          marginLeft: window.innerWidth > 768 ? "0.8rem" : "0.4rem",
                         }}
                         onMouseEnter={(e) => {
-                          e.currentTarget.style.transform = "translateY(-4px) scale(1.02)"
-                          e.currentTarget.style.boxShadow = "0 15px 30px rgba(96, 165, 250, 0.3)"
+                          e.currentTarget.style.transform = "translateY(-3px) scale(1.02)"
+                          e.currentTarget.style.boxShadow = "0 12px 25px rgba(96, 165, 250, 0.3)"
                           e.currentTarget.style.borderColor = "rgba(96, 165, 250, 0.5)"
                         }}
                         onMouseLeave={(e) => {
@@ -1561,35 +1562,35 @@ export default function AnimatedPortfolio() {
                         }}
                       >
                         {/* Company and Position */}
-                        <div style={{ marginBottom: "1rem" }}>
+                        <div style={{ marginBottom: "0.8rem" }}>
                           <h3
                             style={{
-                              fontSize: "clamp(1.1rem, 3vw, 1.3rem)",
+                              fontSize: "clamp(1rem, 2.8vw, 1.2rem)",
                               fontWeight: "bold",
                               color: "#60a5fa",
-                              marginBottom: "0.4rem",
+                              marginBottom: "0.3rem",
                             }}
                           >
                             {experience.company}
                           </h3>
                           <h4
                             style={{
-                              fontSize: "clamp(1rem, 2.5vw, 1.1rem)",
+                              fontSize: "clamp(0.9rem, 2.3vw, 1rem)",
                               color: "#a78bfa",
                               fontWeight: "600",
-                              marginBottom: "0.5rem",
+                              marginBottom: "0.4rem",
                             }}
                           >
                             {experience.position}
                           </h4>
-                          <div style={{ display: "flex", gap: "0.8rem", alignItems: "center", flexWrap: "wrap" }}>
+                          <div style={{ display: "flex", gap: "0.6rem", alignItems: "center", flexWrap: "wrap" }}>
                             <span
                               style={{
-                                fontSize: "clamp(0.7rem, 1.8vw, 0.8rem)",
+                                fontSize: "clamp(0.65rem, 1.6vw, 0.75rem)",
                                 color: "#f59e0b",
                                 background: "rgba(245, 158, 11, 0.1)",
-                                padding: "0.3rem 0.6rem",
-                                borderRadius: "10px",
+                                padding: "0.25rem 0.5rem",
+                                borderRadius: "8px",
                                 border: "1px solid rgba(245, 158, 11, 0.3)",
                               }}
                             >
@@ -1597,7 +1598,7 @@ export default function AnimatedPortfolio() {
                             </span>
                             <span
                               style={{
-                                fontSize: "clamp(0.7rem, 1.8vw, 0.8rem)",
+                                fontSize: "clamp(0.65rem, 1.6vw, 0.75rem)",
                                 color: "#ccc",
                                 fontWeight: "500",
                               }}
@@ -1609,9 +1610,9 @@ export default function AnimatedPortfolio() {
                         {/* Description */}
                         <p
                           style={{
-                            fontSize: "clamp(0.85rem, 2.2vw, 0.95rem)",
+                            fontSize: "clamp(0.8rem, 2vw, 0.9rem)",
                             color: "#ccc",
-                            lineHeight: "1.6",
+                            lineHeight: "1.5",
                           }}
                         >
                           {experience.description}
@@ -1624,7 +1625,7 @@ export default function AnimatedPortfolio() {
                 <div
                   style={{
                     textAlign: "center",
-                    marginTop: "2.5rem",
+                    marginTop: "2rem",
                     animation: "fadeInUp 1s ease-out 1s both",
                     opacity: 0,
                   }}
@@ -1635,9 +1636,9 @@ export default function AnimatedPortfolio() {
                       background: "linear-gradient(135deg, #60a5fa, #3b82f6)",
                       color: "white",
                       border: "none",
-                      padding: "12px 24px",
+                      padding: "10px 20px",
                       borderRadius: "8px",
-                      fontSize: "clamp(0.85rem, 2.2vw, 0.95rem)",
+                      fontSize: "clamp(0.8rem, 2vw, 0.9rem)",
                       fontWeight: "600",
                       cursor: "pointer",
                       transition: "all 0.3s ease",
@@ -1668,9 +1669,9 @@ export default function AnimatedPortfolio() {
           {activeSection === "education" && (
             <main
               style={{
-                paddingTop: "100px",
+                paddingTop: "80px",
                 minHeight: "100vh",
-                padding: "100px 1rem 4rem",
+                padding: "80px 1rem 4rem",
                 animation: "fadeInUp 0.8s ease-out",
               }}
             >
@@ -1684,14 +1685,14 @@ export default function AnimatedPortfolio() {
                 <div
                   style={{
                     textAlign: "center",
-                    marginBottom: "3rem",
+                    marginBottom: "2.5rem",
                     animation: "fadeInUp 1s ease-out 0.2s both",
                     opacity: 0,
                   }}
                 >
                   <h1
                     style={{
-                      fontSize: "clamp(2rem, 8vw, 3.5rem)",
+                      fontSize: "clamp(1.8rem, 7vw, 3rem)",
                       fontWeight: "bold",
                       marginBottom: "1rem",
                       background: "linear-gradient(135deg, #60a5fa, #a78bfa, #f59e0b)",
@@ -1706,11 +1707,11 @@ export default function AnimatedPortfolio() {
                   </h1>
                   <p
                     style={{
-                      fontSize: "clamp(0.9rem, 2.5vw, 1.1rem)",
+                      fontSize: "clamp(0.85rem, 2.2vw, 1rem)",
                       color: "#999",
                       maxWidth: "600px",
                       margin: "0 auto",
-                      lineHeight: "1.6",
+                      lineHeight: "1.5",
                     }}
                   >
                     My academic journey and educational background
@@ -1720,14 +1721,14 @@ export default function AnimatedPortfolio() {
                 <div
                   style={{
                     position: "relative",
-                    paddingLeft: window.innerWidth > 768 ? "2rem" : "1rem",
+                    paddingLeft: window.innerWidth > 768 ? "1.8rem" : "0.8rem",
                   }}
                 >
                   {/* Timeline Line */}
                   <div
                     style={{
                       position: "absolute",
-                      left: window.innerWidth > 768 ? "1rem" : "0.5rem",
+                      left: window.innerWidth > 768 ? "0.9rem" : "0.4rem",
                       top: "0",
                       bottom: "0",
                       width: "2px",
@@ -1739,7 +1740,7 @@ export default function AnimatedPortfolio() {
                       key={education.institution}
                       style={{
                         position: "relative",
-                        marginBottom: "2.5rem",
+                        marginBottom: "2rem",
                         animation: `fadeInUp 0.8s ease-out ${0.4 + index * 0.2}s both`,
                         opacity: 0,
                       }}
@@ -1748,14 +1749,14 @@ export default function AnimatedPortfolio() {
                       <div
                         style={{
                           position: "absolute",
-                          left: window.innerWidth > 768 ? "-2rem" : "-1.5rem",
-                          top: "1rem",
-                          width: "14px",
-                          height: "14px",
+                          left: window.innerWidth > 768 ? "-1.8rem" : "-1.3rem",
+                          top: "0.8rem",
+                          width: "12px",
+                          height: "12px",
                           borderRadius: "50%",
                           background: index === 0 ? "#60a5fa" : index === 1 ? "#a78bfa" : "#f59e0b",
                           border: "3px solid #000",
-                          boxShadow: `0 0 15px ${index === 0 ? "#60a5fa" : index === 1 ? "#a78bfa" : "#f59e0b"}`,
+                          boxShadow: `0 0 12px ${index === 0 ? "#60a5fa" : index === 1 ? "#a78bfa" : "#f59e0b"}`,
                         }}
                       />
                       {/* Education Card */}
@@ -1765,13 +1766,13 @@ export default function AnimatedPortfolio() {
                           backdropFilter: "blur(10px)",
                           border: "1px solid rgba(96, 165, 250, 0.2)",
                           borderRadius: "15px",
-                          padding: "1.5rem",
+                          padding: "1.3rem",
                           transition: "all 0.3s ease",
-                          marginLeft: window.innerWidth > 768 ? "1rem" : "0.5rem",
+                          marginLeft: window.innerWidth > 768 ? "0.8rem" : "0.4rem",
                         }}
                         onMouseEnter={(e) => {
-                          e.currentTarget.style.transform = "translateY(-4px) scale(1.02)"
-                          e.currentTarget.style.boxShadow = "0 15px 30px rgba(96, 165, 250, 0.3)"
+                          e.currentTarget.style.transform = "translateY(-3px) scale(1.02)"
+                          e.currentTarget.style.boxShadow = "0 12px 25px rgba(96, 165, 250, 0.3)"
                           e.currentTarget.style.borderColor = "rgba(96, 165, 250, 0.5)"
                         }}
                         onMouseLeave={(e) => {
@@ -1781,42 +1782,42 @@ export default function AnimatedPortfolio() {
                         }}
                       >
                         {/* Institution and Degree */}
-                        <div style={{ marginBottom: "1rem" }}>
+                        <div style={{ marginBottom: "0.8rem" }}>
                           <h3
                             style={{
-                              fontSize: "clamp(1.1rem, 3vw, 1.3rem)",
+                              fontSize: "clamp(1rem, 2.8vw, 1.2rem)",
                               fontWeight: "bold",
                               color: "#60a5fa",
-                              marginBottom: "0.4rem",
+                              marginBottom: "0.3rem",
                             }}
                           >
                             {education.institution}
                           </h3>
                           <h4
                             style={{
-                              fontSize: "clamp(1rem, 2.5vw, 1.1rem)",
+                              fontSize: "clamp(0.9rem, 2.3vw, 1rem)",
                               color: "#a78bfa",
                               fontWeight: "600",
-                              marginBottom: "0.5rem",
+                              marginBottom: "0.4rem",
                             }}
                           >
                             {education.degree}
                           </h4>
-                          <div style={{ display: "flex", gap: "0.8rem", alignItems: "center", flexWrap: "wrap" }}>
+                          <div style={{ display: "flex", gap: "0.6rem", alignItems: "center", flexWrap: "wrap" }}>
                             <span
                               style={{
-                                fontSize: "clamp(0.7rem, 1.8vw, 0.8rem)",
+                                fontSize: "clamp(0.65rem, 1.6vw, 0.75rem)",
                                 color: "#f59e0b",
                                 background: "rgba(245, 158, 11, 0.1)",
-                                padding: "0.3rem 0.6rem",
-                                borderRadius: "10px",
+                                padding: "0.25rem 0.5rem",
+                                borderRadius: "8px",
                                 border: "1px solid rgba(245, 158, 11, 0.3)",
                                 display: "flex",
                                 alignItems: "center",
-                                gap: "0.4rem",
+                                gap: "0.3rem",
                               }}
                             >
-                              <GraduationCap size={14} />
+                              <GraduationCap size={12} />
                               {education.duration}
                             </span>
                           </div>
@@ -1824,9 +1825,9 @@ export default function AnimatedPortfolio() {
                         {/* Description */}
                         <p
                           style={{
-                            fontSize: "clamp(0.85rem, 2.2vw, 0.95rem)",
+                            fontSize: "clamp(0.8rem, 2vw, 0.9rem)",
                             color: "#ccc",
-                            lineHeight: "1.6",
+                            lineHeight: "1.5",
                           }}
                         >
                           {education.description}
@@ -1839,7 +1840,7 @@ export default function AnimatedPortfolio() {
                 <div
                   style={{
                     textAlign: "center",
-                    marginTop: "2.5rem",
+                    marginTop: "2rem",
                     animation: "fadeInUp 1s ease-out 1s both",
                     opacity: 0,
                   }}
@@ -1850,9 +1851,9 @@ export default function AnimatedPortfolio() {
                       background: "linear-gradient(135deg, #60a5fa, #3b82f6)",
                       color: "white",
                       border: "none",
-                      padding: "12px 24px",
+                      padding: "10px 20px",
                       borderRadius: "8px",
-                      fontSize: "clamp(0.85rem, 2.2vw, 0.95rem)",
+                      fontSize: "clamp(0.8rem, 2vw, 0.9rem)",
                       fontWeight: "600",
                       cursor: "pointer",
                       transition: "all 0.3s ease",
@@ -1883,9 +1884,9 @@ export default function AnimatedPortfolio() {
           {activeSection === "certificates" && (
             <main
               style={{
-                paddingTop: "100px",
+                paddingTop: "80px",
                 minHeight: "100vh",
-                padding: "100px 1rem 4rem",
+                padding: "80px 1rem 4rem",
                 animation: "fadeInUp 0.8s ease-out",
                 position: "relative",
                 overflow: "hidden",
@@ -1933,7 +1934,7 @@ export default function AnimatedPortfolio() {
                 <div
                   style={{
                     textAlign: "center",
-                    marginBottom: "3rem",
+                    marginBottom: "2.5rem",
                     animation: "fadeInUp 1s ease-out 0.2s both",
                     opacity: 0,
                     position: "relative",
@@ -1946,8 +1947,8 @@ export default function AnimatedPortfolio() {
                       top: "50%",
                       left: "50%",
                       transform: "translate(-50%, -50%)",
-                      width: "150px",
-                      height: "150px",
+                      width: "120px",
+                      height: "120px",
                       background: "radial-gradient(circle, rgba(96, 165, 250, 0.1), transparent)",
                       borderRadius: "50%",
                       animation: "breathe 4s ease-in-out infinite",
@@ -1956,7 +1957,7 @@ export default function AnimatedPortfolio() {
                   />
                   <h1
                     style={{
-                      fontSize: "clamp(1.8rem, 7vw, 3rem)",
+                      fontSize: "clamp(1.6rem, 6vw, 2.5rem)",
                       fontWeight: "bold",
                       marginBottom: "1rem",
                       background: "linear-gradient(135deg, #60a5fa, #a78bfa, #f59e0b)",
@@ -1970,30 +1971,30 @@ export default function AnimatedPortfolio() {
                   >
                     Certificates & Achievements
                     {/* Sparkle Effects */}
-                    {[...Array(4)].map((_, i) => (
+                    {[...Array(3)].map((_, i) => (
                       <div
                         key={i}
                         style={{
                           position: "absolute",
-                          width: "3px",
-                          height: "3px",
+                          width: "2px",
+                          height: "2px",
                           backgroundColor: "#f59e0b",
                           borderRadius: "50%",
                           top: `${20 + Math.random() * 60}%`,
                           left: `${10 + Math.random() * 80}%`,
                           animation: `sparkle ${1 + Math.random() * 2}s ease-in-out infinite ${Math.random() * 2}s`,
-                          boxShadow: "0 0 4px #f59e0b",
+                          boxShadow: "0 0 3px #f59e0b",
                         }}
                       />
                     ))}
                   </h1>
                   <p
                     style={{
-                      fontSize: "clamp(0.85rem, 2.2vw, 1rem)",
+                      fontSize: "clamp(0.8rem, 2vw, 0.95rem)",
                       color: "#999",
                       maxWidth: "600px",
                       margin: "0 auto",
-                      lineHeight: "1.6",
+                      lineHeight: "1.5",
                       animation: "fadeInUp 1s ease-out 0.4s both",
                       opacity: 0,
                     }}
@@ -2006,9 +2007,9 @@ export default function AnimatedPortfolio() {
                 <div
                   style={{
                     display: "grid",
-                    gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
-                    gap: "2rem",
-                    marginBottom: "3rem",
+                    gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
+                    gap: "1.5rem",
+                    marginBottom: "2.5rem",
                   }}
                 >
                   {certificatesData.map((certificate, index) => {
@@ -2020,8 +2021,8 @@ export default function AnimatedPortfolio() {
                           background: "rgba(255, 255, 255, 0.02)",
                           backdropFilter: "blur(20px)",
                           border: "1px solid rgba(96, 165, 250, 0.15)",
-                          borderRadius: "20px",
-                          padding: "2rem 1.5rem",
+                          borderRadius: "18px",
+                          padding: "1.5rem 1.2rem",
                           textAlign: "center",
                           transition: "all 0.5s cubic-bezier(0.4, 0, 0.2, 1)",
                           animation: `certificateSlideIn 1s ease-out ${0.4 + index * 0.15}s both`,
@@ -2031,9 +2032,9 @@ export default function AnimatedPortfolio() {
                           cursor: "pointer",
                         }}
                         onMouseEnter={(e) => {
-                          e.currentTarget.style.transform = "translateY(-10px) scale(1.03) rotateX(3deg)"
+                          e.currentTarget.style.transform = "translateY(-8px) scale(1.03) rotateX(2deg)"
                           e.currentTarget.style.boxShadow =
-                            "0 25px 50px rgba(96, 165, 250, 0.4), 0 0 40px rgba(96, 165, 250, 0.2)"
+                            "0 20px 40px rgba(96, 165, 250, 0.4), 0 0 30px rgba(96, 165, 250, 0.2)"
                           e.currentTarget.style.borderColor = "rgba(96, 165, 250, 0.8)"
                           e.currentTarget.style.background = "rgba(255, 255, 255, 0.08)"
                         }}
@@ -2056,7 +2057,7 @@ export default function AnimatedPortfolio() {
                               rgba(96, 165, 250, 0.05) 0%, 
                               rgba(167, 139, 250, 0.05) 50%, 
                               rgba(245, 158, 11, 0.05) 100%)`,
-                            borderRadius: "20px",
+                            borderRadius: "18px",
                             animation: "gradientMove 6s ease-in-out infinite",
                             zIndex: -1,
                           }}
@@ -2068,15 +2069,15 @@ export default function AnimatedPortfolio() {
                             key={i}
                             style={{
                               position: "absolute",
-                              width: `${15 + i * 8}px`,
-                              height: `${15 + i * 8}px`,
+                              width: `${12 + i * 6}px`,
+                              height: `${12 + i * 6}px`,
                               background: `radial-gradient(circle, rgba(${
                                 i === 0 ? "96, 165, 250" : "245, 158, 11"
                               }, 0.3), transparent)`,
                               borderRadius: "50%",
-                              top: `${20 + i * 25}%`,
-                              right: `${10 + i * 20}%`,
-                              animation: `floatOrb ${3 + i}s ease-in-out infinite ${i * 0.5}s`,
+                              top: `${20 + i * 20}%`,
+                              right: `${10 + i * 15}%`,
+                              animation: `floatOrb ${2.5 + i}s ease-in-out infinite ${i * 0.5}s`,
                               filter: "blur(1px)",
                             }}
                           />
@@ -2086,7 +2087,7 @@ export default function AnimatedPortfolio() {
                         <div
                           style={{
                             position: "relative",
-                            marginBottom: "1.5rem",
+                            marginBottom: "1.2rem",
                             display: "flex",
                             justifyContent: "center",
                             alignItems: "center",
@@ -2096,8 +2097,8 @@ export default function AnimatedPortfolio() {
                           <div
                             style={{
                               position: "relative",
-                              width: "clamp(70px, 18vw, 85px)",
-                              height: "clamp(70px, 18vw, 85px)",
+                              width: "clamp(60px, 16vw, 75px)",
+                              height: "clamp(60px, 16vw, 75px)",
                               background: `linear-gradient(135deg, 
                                 ${
                                   index % 3 === 0
@@ -2106,18 +2107,18 @@ export default function AnimatedPortfolio() {
                                       ? "#a78bfa, #8b5cf6"
                                       : "#f59e0b, #d97706"
                                 })`,
-                              borderRadius: "20px",
+                              borderRadius: "18px",
                               display: "flex",
                               alignItems: "center",
                               justifyContent: "center",
                               animation: "iconPulse 3s ease-in-out infinite, iconRotate 20s linear infinite",
-                              boxShadow: `0 12px 30px rgba(${
+                              boxShadow: `0 10px 25px rgba(${
                                 index % 3 === 0 ? "96, 165, 250" : index % 3 === 1 ? "167, 139, 250" : "245, 158, 11"
                               }, 0.4)`,
                             }}
                           >
                             <IconComponent
-                              size={window.innerWidth > 768 ? 32 : 28}
+                              size={window.innerWidth > 768 ? 28 : 24}
                               color="white"
                               style={{
                                 filter: "drop-shadow(0 2px 4px rgba(0,0,0,0.3))",
@@ -2131,8 +2132,8 @@ export default function AnimatedPortfolio() {
                                 key={ringIndex}
                                 style={{
                                   position: "absolute",
-                                  width: `${100 + ringIndex * 15}px`,
-                                  height: `${100 + ringIndex * 15}px`,
+                                  width: `${85 + ringIndex * 12}px`,
+                                  height: `${85 + ringIndex * 12}px`,
                                   border: `2px solid rgba(${
                                     index % 3 === 0
                                       ? "96, 165, 250"
@@ -2148,7 +2149,7 @@ export default function AnimatedPortfolio() {
                                         ? "167, 139, 250"
                                         : "245, 158, 11"
                                   }, ${0.8 - ringIndex * 0.2})`,
-                                  animation: `ringRotate ${2.5 + ringIndex}s linear infinite ${
+                                  animation: `ringRotate ${2.2 + ringIndex}s linear infinite ${
                                     ringIndex % 2 === 0 ? "" : "reverse"
                                   }`,
                                 }}
@@ -2156,19 +2157,19 @@ export default function AnimatedPortfolio() {
                             ))}
 
                             {/* Energy Particles */}
-                            {[...Array(6)].map((_, particleIndex) => (
+                            {[...Array(5)].map((_, particleIndex) => (
                               <div
                                 key={particleIndex}
                                 style={{
                                   position: "absolute",
-                                  width: "2px",
-                                  height: "2px",
+                                  width: "1.5px",
+                                  height: "1.5px",
                                   backgroundColor: "#fff",
                                   borderRadius: "50%",
-                                  animation: `particleOrbit ${1.8 + particleIndex * 0.15}s linear infinite ${particleIndex * 0.2}s`,
+                                  animation: `particleOrbit ${1.6 + particleIndex * 0.12}s linear infinite ${particleIndex * 0.15}s`,
                                   transformOrigin: "0 0",
-                                  boxShadow: "0 0 4px #fff",
-                                  transform: `rotate(${particleIndex * 60}deg) translateX(50px)`,
+                                  boxShadow: "0 0 3px #fff",
+                                  transform: `rotate(${particleIndex * 72}deg) translateX(42px)`,
                                 }}
                               />
                             ))}
@@ -2176,7 +2177,7 @@ export default function AnimatedPortfolio() {
                         </div>
 
                         {/* Certificate Details */}
-                        <div style={{ marginBottom: "1.5rem" }}>
+                        <div style={{ marginBottom: "1.2rem" }}>
                           {/* Category Badge */}
                           <div
                             style={{
@@ -2185,11 +2186,11 @@ export default function AnimatedPortfolio() {
                                 index % 3 === 0 ? "96, 165, 250" : index % 3 === 1 ? "167, 139, 250" : "245, 158, 11"
                               }, 0.15)`,
                               color: `${index % 3 === 0 ? "#60a5fa" : index % 3 === 1 ? "#a78bfa" : "#f59e0b"}`,
-                              padding: "0.4rem 0.8rem",
-                              borderRadius: "15px",
-                              fontSize: "clamp(0.65rem, 1.6vw, 0.75rem)",
+                              padding: "0.3rem 0.6rem",
+                              borderRadius: "12px",
+                              fontSize: "clamp(0.6rem, 1.4vw, 0.7rem)",
                               fontWeight: "600",
-                              marginBottom: "0.8rem",
+                              marginBottom: "0.6rem",
                               border: `1px solid rgba(${
                                 index % 3 === 0 ? "96, 165, 250" : index % 3 === 1 ? "167, 139, 250" : "245, 158, 11"
                               }, 0.3)`,
@@ -2202,12 +2203,12 @@ export default function AnimatedPortfolio() {
                           {/* Certificate Name */}
                           <h3
                             style={{
-                              fontSize: "clamp(0.9rem, 2.5vw, 1rem)",
+                              fontSize: "clamp(0.85rem, 2.2vw, 0.95rem)",
                               fontWeight: "bold",
                               color: "#fff",
-                              marginBottom: "0.4rem",
-                              lineHeight: "1.3",
-                              minHeight: "2.6rem",
+                              marginBottom: "0.3rem",
+                              lineHeight: "1.2",
+                              minHeight: "2.4rem",
                               display: "flex",
                               alignItems: "center",
                               justifyContent: "center",
@@ -2220,10 +2221,10 @@ export default function AnimatedPortfolio() {
                           {/* Issuer */}
                           <p
                             style={{
-                              fontSize: "clamp(0.75rem, 1.8vw, 0.85rem)",
+                              fontSize: "clamp(0.7rem, 1.6vw, 0.8rem)",
                               color: "#999",
                               fontWeight: "500",
-                              marginBottom: "1.2rem",
+                              marginBottom: "1rem",
                             }}
                           >
                             Issued by {certificate.issuer}
@@ -2231,7 +2232,7 @@ export default function AnimatedPortfolio() {
                         </div>
 
                         {/* Status and Actions */}
-                        <div style={{ display: "flex", flexDirection: "column", gap: "0.8rem", alignItems: "center" }}>
+                        <div style={{ display: "flex", flexDirection: "column", gap: "0.6rem", alignItems: "center" }}>
                           {/* Enhanced View Certificate Button */}
                           <a
                             href={certificate.url}
@@ -2240,12 +2241,12 @@ export default function AnimatedPortfolio() {
                             style={{
                               display: "inline-flex",
                               alignItems: "center",
-                              gap: "0.6rem",
+                              gap: "0.5rem",
                               color: "white",
                               textDecoration: "none",
-                              fontSize: "clamp(0.8rem, 2.2vw, 0.9rem)",
+                              fontSize: "clamp(0.75rem, 2vw, 0.85rem)",
                               fontWeight: "600",
-                              padding: "0.8rem 1.5rem",
+                              padding: "0.6rem 1.2rem",
                               background: `linear-gradient(135deg, ${
                                 index % 3 === 0
                                   ? "#60a5fa, #3b82f6"
@@ -2253,7 +2254,7 @@ export default function AnimatedPortfolio() {
                                     ? "#a78bfa, #8b5cf6"
                                     : "#f59e0b, #d97706"
                               })`,
-                              borderRadius: "12px",
+                              borderRadius: "10px",
                               transition: "all 0.4s cubic-bezier(0.4, 0, 0.2, 1)",
                               position: "relative",
                               overflow: "hidden",
@@ -2261,8 +2262,8 @@ export default function AnimatedPortfolio() {
                             }}
                             onMouseEnter={(e) => {
                               const target = e.currentTarget as HTMLElement
-                              target.style.transform = "perspective(1000px) rotateX(-8deg) translateY(-3px) scale(1.05)"
-                              target.style.boxShadow = `0 15px 30px rgba(${
+                              target.style.transform = "perspective(1000px) rotateX(-6deg) translateY(-2px) scale(1.05)"
+                              target.style.boxShadow = `0 12px 25px rgba(${
                                 index % 3 === 0 ? "96, 165, 250" : index % 3 === 1 ? "167, 139, 250" : "245, 158, 11"
                               }, 0.5)`
                               target.style.filter = "brightness(1.1) saturate(1.2)"
@@ -2287,10 +2288,10 @@ export default function AnimatedPortfolio() {
                                 animation: "buttonShine 3s ease-in-out infinite",
                               }}
                             />
-                            <Award size={16} />
+                            <Award size={14} />
                             View Certificate
                             <ExternalLink
-                              size={14}
+                              size={12}
                               style={{
                                 animation: "linkBounce 2s ease-in-out infinite",
                               }}
@@ -2316,9 +2317,9 @@ export default function AnimatedPortfolio() {
                       background: "linear-gradient(135deg, #60a5fa, #3b82f6)",
                       color: "white",
                       border: "none",
-                      padding: "12px 24px",
+                      padding: "10px 20px",
                       borderRadius: "8px",
-                      fontSize: "clamp(0.85rem, 2.2vw, 0.95rem)",
+                      fontSize: "clamp(0.8rem, 2vw, 0.9rem)",
                       fontWeight: "600",
                       cursor: "pointer",
                       transition: "all 0.3s ease",
@@ -2649,19 +2650,39 @@ export default function AnimatedPortfolio() {
           }
         }
 
-        /* Additional Mobile Optimizations */
+        /* Enhanced Mobile Optimizations */
         @media (max-width: 480px) {
           header {
-            padding: 0.5rem 0 !important;
+            padding: 0.4rem 0 !important;
           }
           
           nav {
-            gap: 0.3rem !important;
+            gap: 0.2rem !important;
           }
           
           nav button {
-            padding: 0.3rem 0.5rem !important;
-            font-size: 0.8rem !important;
+            padding: 0.25rem 0.4rem !important;
+            font-size: 0.7rem !important;
+          }
+          
+          main {
+            padding-top: 70px !important;
+          }
+        }
+
+        /* Ultra small screens */
+        @media (max-width: 360px) {
+          header {
+            padding: 0.3rem 0 !important;
+          }
+          
+          main {
+            padding-top: 65px !important;
+          }
+          
+          nav button {
+            padding: 0.2rem 0.3rem !important;
+            font-size: 0.65rem !important;
           }
         }
       `}</style>
